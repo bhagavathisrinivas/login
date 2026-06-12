@@ -9,11 +9,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'pages/login_page.dart';
 import 'pages/register_page.dart';
 import 'pages/home_page.dart';
+import 'pages/profile_page.dart';
 import 'pages/dashboard_page.dart';
 import 'pages/forgot_password_page.dart';
 import 'pages/reset_password_page.dart';
 import 'pages/admin_register_page.dart';
 import 'pages/admin_dashboard_page.dart';
+
 
 // ─── Global Navigator Key ─────────────────────────────────────────────────────
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -72,12 +74,16 @@ class MyApp extends StatelessWidget {
       // ── Routes ──────────────────────────────────────────────────────────────
       routes: {
         '/login':            (_) => const LoginPage(),
+
         '/register':         (_) => const RegisterPage(),
         '/home':             (_) => const HomePage(),
+        '/profile': (context) => const ProfilePage(),
         '/dashboard':        (_) => const DashboardPage(),
         '/forgot-password':  (_) => const ForgotPasswordPage(),
         '/admin-register':   (_) => const AdminRegisterPage(),
         '/admin-dashboard':  (_) => const AdminDashboardPage(),
+
+
       },
 
       // ── Dynamic routes (need arguments) ────────────────────────────────────
